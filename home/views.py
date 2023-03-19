@@ -43,7 +43,7 @@ def about(request):
     
 def faq(request):
     
-    return render(request, "faq.html", context={
+    return render(request, "FAQ.html", context={
         
     })
     
