@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<!-- "Hero" Section -->
+
+{% if messages %}
+<ul class="messages" id="messages" style="display: flex;justify-content: center;align-items: center;list-style:none;font-size: 50px;">
+    {% for message in messages %}
+    <li id = "message" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    <li><button id="become-button" style="color: white;" onclick="dis();">X</button></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="container hero">
+    <h1>Welcome to Virtual Line</h1>
+    <p>We train, and prepare you to get the work-from-home job you're looking for. </p>
+    <p id="p2">Scroll Down for More Information</p>
+    <span id="p3"><img src="{% static 'images/down-arrow.png' %}" alt=""></span>
+</div>
+
+<div class="container process">
+    <h1>EASY 3 STEP APPLICATION PROCESS!</h1>
+    <div class="processes">
+        <div class="steps">
+            <h2>Apply</h2>
+            <p>Apply by clicking on the following link, and filling out the form, and wait for an email response with further information. Follow the steps inside the email and wait 12-48 hours for a response.</p>
+        </div>
+        <div class="steps">
+            <h2>Train at Home</h2>
+            <p>Once you are approved by <b>Virtual Line</b>, you will be able to select available jobs that captures your interest.</p>
+        </div>
+        <div class="steps">
+            <h2>Earn Money</h2>
+            <p>Choose your schedule and then start earning money. Our partners pay between $12-$18 an hour. You will get paid biweekly, referral bonuses, raffles, and more!</p>
+        </div>
+    </div>
+</div>
+
+<div class="container requirements">
+    <h1>Requirements</h1>
+    <div class="reqs">
+        <p>Must be 18+ or older to apply</p>
+        <p>Must have noise cancellation headset</p>
+        <p>Must have your own desktop or laptop</p>
+    </div>
+</div>
+
+<div class="container benefits">
+    <h1>Benefits of Working from Home</h1>
+    <div class="bens">
+        <div class="ben">
+            <h2>Flexible Schedule & Comfortability</h2>
+            <p>Having a flexible schedule will allow you to take charge of your life and get back your time. This can be accomplished all from the comfort of your home in a relaxed environment with no distractions. </p>
+        </div>
+        <div class="ben">
+            <h2>Save on Commute</h2>
+            <p>Commuting in today's world can be quite pricey with the rise of gas prices. Relax, and have no commute but to your home office space. </p>
+        </div>
+        <div class="ben">
+            <h2>Get Paid Quickly</h2>
+            <p>We offer direct deposit as a form of payment to our independent contractors twice a month. </p>
+        </div>
+        <div class="ben">
+            <h2>Bonuses and Incentives</h2>
+            <p>Periodically, we have raffles and referral bonuses along with other incentives within our call center for high rating performances to keep our agents motivated and extra money in their pockets!</p>
+        </div>
+        <div class="ben">
+            <h2>You are our #1 Priority</h2>
+            <p>We make sure you are on the path to success! Performances are monitored and we make certain you will get SOW renewals every 90 days. We are always available if you need assistance.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container expectations">
+    <h1>What you can Expect</h1>
+    <div class="container expecs">
+        <p>Create your own schedule and set your own hours!</p>
+        <p>Work from the comfort of your home with no distractions!</p>
+        <p>Work for Top Fortune 500 companies and become your own Boss!</p>
+    </div>
+    <ul class="list" style="display: flex; justify-content: center;">
+        <li id="become-button" style="border:2px solid white;"><a href="/become-an-agent/">Become an Agent</a></li>
+    </ul>
+</div>
+
+<div class="container partners">
+    <h1>A Few of Our Featured Partners</h1>
+    <div class="parts">
+        <img src="{% static 'images/home-depot-logo.webp' %}" alt="home depot logo">
+        <img src="{% static 'images/airbnb.webp' %}" alt="air b n b logo">
+        <img src="{% static 'images/PTON_BIG_D-9465ad88.webp' %}" alt="peloton logo">
+        <img src="{% static 'images/Dicks-Sporting-Goods-Symbol.webp' %}" alt="dicks sporting goods logo">
+        <img src="{% static 'images/princess-cruises-1-logo.webp' %}" alt="princess cruises logo">
+        <img src="{% static 'images/coach.webp' %}" alt="coach logo">
+    </div>
+</div>
+
+<div class="container contact" id="contact">
+    <div class="first">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="second">
+        <div class="form">
+            <form action="/contact/" method="post">
+                <h2>If You Would Like to Work From Home,<br>Leave Us a Message
+                    and We’ll Get Back to You:</h2>
+                {% csrf_token %}
+                {{ form.as_p }}
+                
+                <button style="color:white;border:none;" id="become-button" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="address">
+            <h1>
+                Mailing Address:
+            </h1>
+            <p>
+                5840 Red Bug Lake Rd
+                #1512 Winter Springs, FL 32708
+            </p>
+            <h1>
+                Email:
+            </h1>
+            <a href="mailto:support@virtualline.co" style="color:goldenrod">support@virtualline.co</a> 
+        </div>
+    </div>
+    <a href="#navigation" style="color:white; padding-top:50px; font-size:larger;">< Back to Top ></a>
+</div>
+
+
+{% endblock %}

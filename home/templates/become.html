@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+Become An Agent
+{% endblock %}
+
+{% block content %}
+
+{% if messages %}
+<ul class="messages" id="messages" style="display: flex;justify-content: center;align-items: center;list-style:none;font-size: 50px;">
+    {% for message in messages %}
+    <li id = "message" {% if message.tags == "become" %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    <li><button id="become-button" style="color: white;" onclick="dis();">X</button></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="main-header">
+    <h1>
+        Become An Agent
+    </h1>
+</div>
+
+<div class="container become">
+    <div class="side-text">
+        <h1>Please fill out this Enrollment Form:</h1>
+        <p>Become a part of Virtual Line and become your own Boss! </p>
+        <p>Make your own schedule and set your own hours!</p>
+        <p>Get your time and freedom back!</p>
+        <div class="important">
+            <h2>IMPORTANT!</h2>
+            <P>** Please remember to check all email folders. Occasionally, our emails don't get directed into the correct folder. You will receive an email regarding your submission within 24 hours. Thank you.**</P>
+        </div>
+    </div>
+    <div class="become-form">
+        <form action="." method="post">
+            
+            {% csrf_token %}
+            {{ form }}
+
+            <button id="become-button" style="border:none;color:white;" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

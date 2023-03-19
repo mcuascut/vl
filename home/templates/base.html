@@ -1,16 +1,55 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo-fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>
         {% block title %}
-        {% endblock %}
+        {% endblock %} | Virtual Line LLC
     </title>
 </head>
 <body>
+
+    <!-- NAV -->
+
+    <div class="menu">
+        <img onclick="expand(this.id)" src="{% static 'images/menu.png' %}" alt="">
+    </div>
+
+
+    <div class="container nav" id="navigation">
+        <div class="brand">
+            <a href="/">
+                <img src="{% static 'images/logo.webp' %}" alt="company logo">
+            </a>
+            <div class="brand-text">
+                <h1 id="par-header"><a href="/">Virtual Line LLC</a></h1>
+                <span id="par">Virtual Business Solutions</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/FAQ">FAQ</a></li>
+                <li id="become-button"><a href="{% url 'become' %}">Become an Agent</a></li>
+                <li><a href="https://instagram.com/virtualline_/" target="_blank"><img class="insta" src="{% static 'images/instagram.png' %}" alt="instagram logo"></a></li>
+            </ul>
+        </nav>
+    </div>
+
     {% block content %}
     {% endblock %}
+
+<div class="container footer">
+    <p>&copy; 2022 Virtual Line</p>
+</div>
+    
+<script src="{% static 'js/javascript.js' %}"></script>
 </body>
 </html>

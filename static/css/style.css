@@ -1,0 +1,737 @@
+html, body {
+    background-color: rgb(11, 26, 49);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* p {
+    text-indent: 5%;
+} */
+
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+/* Main Headers */
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: rgb(98, 183, 211);
+}
+
+/* ------------ */
+
+/* Nav Section */
+.menu {
+    display: none;
+}
+
+.menu img {
+    padding: 5px 30px;
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    background-color: rgb(98, 183, 211)!important;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.insta {
+    width: 30px;
+    margin-top: 7px;
+}
+
+#par {
+    position: relative;
+    left: 10px;
+}
+
+#par-header {
+    position: relative;
+    top: 20px;
+    font-size: 25px;
+}
+
+.brand-text, .brand-text h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.list li a:hover {
+    color: rgb(80, 80, 80);
+}
+
+#become-button {
+    background-color: goldenrod;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+#become-button:active {
+    transform: scale(.9, .9);
+}
+
+/* ------------ */
+/* Hero Section */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url('/static/images/bgbg.png');
+    background-size: cover;
+    max-width: 100vw;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* background-color: rgba(80, 80, 80, .3); */
+    font-size: 50px;
+    padding: 50px 50px;
+    border-radius: 10px;
+    animation-name: fade-in;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.hero p {
+    opacity: 0;
+    width: 60vw;
+    font-size: 50px;
+    animation-name: fade-in-2;
+    animation-delay: 3s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+#p2 {
+    opacity: 0;
+    width: 60vw;
+    font-size: 50px;
+    animation-name: fade-in-2;
+    animation-delay: 6s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#p3 {
+    transform: rotate(90deg);
+    opacity: 0;
+    color: white;
+    height: 20px;
+    width: 20px;
+    animation: fade-in-2 4s 8s forwards, float 3s infinite;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    20% {
+        opacity: .5;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+
+    80%{
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+}
+@keyframes fade-in-2 {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    20% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+/* ---------------------- */
+/* 3-Step Process Section */
+
+.process {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(98, 183, 211);
+}
+
+.processes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.steps {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border: 2px solid rgb(98, 183, 211);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.steps h2 {
+    color: rgb(0, 125, 170);
+    border-bottom: 2px solid rgb(98, 183, 211);
+}
+
+.steps p {
+    width: 70%;
+    color: rgb(11, 26, 49);
+}
+
+/* ---------------------- */
+/* ABOUT: Meet the CEO Section */
+
+.CEO {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    background-color: rgb(98, 183, 211);
+}
+
+.CEO .bg {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 70px 0;
+    width: 40%;
+}
+
+.CEO img {
+    width: auto;
+    height: 400px;
+}
+
+.CEO-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(98, 183, 211);
+}
+
+.CEO p {
+    width: 50%;
+    color: black;
+}
+
+.who-we-are {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding-bottom: 50px;
+}
+
+/* ---------------------- */
+/* Requirements Section */
+
+.requirements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    background-color: goldenrod;
+}
+
+.reqs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.reqs p {
+    padding: 0 20px 20px 0;
+    border-right: 2px solid white;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* -------------------- */
+/* Benefits Section */
+
+.benefits {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(98, 183, 211);
+}
+
+.bens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ben {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px 0;
+    border: 2px solid rgb(98, 183, 211);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.ben h2 {
+    color: rgb(0, 125, 170);
+    border-bottom: 2px solid rgb(98, 183, 211);
+}
+
+.ben p {
+    width: 70%;
+    color: rgb(11, 26, 49);
+}
+
+/* Expectations Section */
+
+.expectations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    background-color: goldenrod;
+}
+
+.expecs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.expecs p {
+    padding: 0 20px 20px 0;
+    border-right: 2px solid white;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* ---------------- */
+/* Partners Section */
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ------------ */
+/* Contact Form */
+
+.contact {
+    border-top: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+form input, form textarea {
+    padding: 10px 30px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgb(98, 183, 211);
+    border-right: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    width: 80%;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    width: 80%;
+}
+
+form button {
+    width: 100px;
+    align-self: center;
+}
+
+/* ------------ */
+/* Footer */ 
+
+.footer {
+    background-color: black;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------ */
+/* FAQ Section */
+
+.faq {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.q-n-a {
+    width: 80%;
+}
+
+.q-n-a h1 {
+    font-size: 25px;
+}
+
+/* ----------- */
+
+/* Become An Agent Page */
+
+.become {
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.side-text {
+    width: 30%;
+}
+
+.important {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    color: red;
+    width: 50%;
+    margin-top: 100px;
+}
+
+.important h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.important p {
+    padding: 0 10px;
+}
+
+.become-form form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#id_age, #id_laptop {
+    width: 100px;
+}
+
+/* -------------------- */
+
+/* Media Queries Section */
+
+@media only screen and (max-width: 1035px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+
+    .nav {
+        gap: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 1167px) {
+
+    /* About Page */
+
+    .CEO .bg {
+        width: 80%;
+    }
+    
+    .CEO img {
+        height: 300px;
+    }
+    
+    .CEO-text {
+        color: rgb(98, 183, 211);
+    }
+    
+    .CEO p {
+        width: 80%;
+        color: black;
+    }
+
+    .paragraphs {
+        width: 80%;
+    }
+
+    /* ---------- */
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .nav {
+        transform-origin: top center;
+        transform: scaleY(0);
+        height: 10px;
+    }
+
+    .hero {
+        background-position-y: -30px;
+    }
+
+    .transform {
+        transform: scaleY(1);
+        height: fit-content;
+        transition: .1s ease-out;
+    }
+
+    .second{
+        flex-direction: column;
+    }
+
+    .address {
+        padding: 20px 0;
+    }
+
+    #p3 {
+        display: none;
+    }
+
+    /* become an agent page */
+
+    .become {
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+    }
+
+    .become-form form {
+        width: 90%;
+    }
+
+    .side-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    .side-text h1 {
+        width: 90%;
+    }
+
+    .important {
+        align-self: center;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 1035px){
+    html {
+        overflow-x: hidden;
+    }
+
+    .hero h1, .hero p, #p2, #p3 {
+        font-size: 30px;
+    }
+
+    #p3 {
+        width: 10px;
+        height: 10px;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(-60px);
+        }
+        50% {
+            transform: translateY(-40px);
+        }
+        100% {
+            transform: translateY(-60px);
+        }
+    }
+
+    .process h1 {
+        text-align: center;
+        width: 90%;
+    }
+
+    .reqs, .expecs {
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .steps {
+        width: 400px;
+    }
+
+    .bens {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .ben {
+        width: 400px;
+    }
+
+    .parts {
+        gap: 30px;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .parts img {
+        animation: carousel 15s linear infinite;
+    }
+
+    @keyframes carousel {
+        0% {
+            transform: translate3d(300px, 0, 0);
+          }
+        50% {
+            transform: translate3d(-200px, 0, 0); 
+          }
+
+        100% {
+            transform: translate3d(300px, 0, 0);
+          }
+    }
+}
+
+@media only screen and (min-width: 1035px) and (max-width: 1570px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    .bens {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

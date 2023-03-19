@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+About
+{% endblock %}
+
+{% block content %}
+
+<div class="main-header">
+    <h1>About Us</h1>
+</div>
+
+<div class="container CEO">
+    <div class="bg">
+            <div class="CEO-text">
+                <div>
+                    <img src="{% static 'images/ceo.webp' %}" alt="ceo portrait">
+                </div>
+                <h1>Meet the CEO</h1>
+                <p>Virtual Line is established by <b>Amber Lawrence</b>, who leads countless amounts of dedicated agents to take back control of their life and money by working from the comfort of their homes, while being fully supported by her company. This company was built to provide financial freedom to agents looking to leave their humdrum 9-5 jobs and gain their time back while creating their own work schedule. Virtual Line is here to provide agents an opportunity to become their own bosses. We cannot wait to witness your success!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="who-we-are">
+    <div class="header">
+        <h1>Who We Are</h1>
+    </div>
+    <div class="paragraphs">
+        <p>Virtual Line LLC is a virtual solution company who is widely recognized by various companies in one of the fastest growing industries. We contract agents to work for Fortune 500 companies to perform customer service, technical support and sales. All of these positions are work from home opportunities. </p>
+        <p>If you desire to make your own schedule and set your own hours, this is a great opportunity. With Virtual Line, you will have your time and freedom back all while becoming your own Boss! Whether you are a college student, stay-at-home parent, disabled, retired, etc or just need some extra money, Virtual Line will be a great asset for you!</p>
+        <p>Our agents receive inbound calls. There is NO telemarketing involved. </p>
+        <p>We offer positions with top Fortune 500 companies. Some of these companies include theme parks, cruise lines, cable companies, road side assistance, telecommunications and so much more! Virtual Line is committed to providing our agents with new opportunities and great success! </p>
+        <ul class="list" style="display: flex; justify-content: center;">
+            <li id="become-button"><a href="/become-an-agent/">Become an Agent</a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
