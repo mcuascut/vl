@@ -2,37 +2,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".steps", {duration: .5, scrollTrigger: {
     trigger: ".steps",
-    start: "top bottom",
+    start: "70% bottom",
     markers: false,
 }, x: 0, stagger: 0.3});
 
 gsap.to(".req-p", {duration: .5, scrollTrigger: {
     trigger: ".requirements",
-    start: "top bottom",
+    start: "70% bottom",
     markers: false,
 }, x: 0, stagger: 0.3});
 
 gsap.to(".ben", {duration: .5, scrollTrigger: {
     trigger: ".benefits",
-    start: "top bottom",
+    start: "50% bottom",
     markers: false,
 }, x: 0, stagger: 0.3});
 
 gsap.to(".ex-p", {duration: .5, scrollTrigger: {
     trigger: ".expectations",
-    start: "top bottom",
+    start: "70% bottom",
     markers: false,
 }, x: 0, stagger: 0.3});
 
 gsap.to(".bec", {duration: 1, scrollTrigger: {
     trigger: ".bec",
-    start: "top bottom",
+    start: "50% bottom",
     markers: false,
 },delay: 1, opacity: 1});
 
 gsap.to(".bec", {duration: 2, scrollTrigger: {
     trigger: ".bec",
-    start: "top bottom",
+    start: "50% bottom",
     markers: false,
 }, delay: 1.5, backgroundColor: "rgb(98, 183, 211)", color: "white"});
 
