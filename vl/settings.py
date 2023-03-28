@@ -67,8 +67,8 @@ WSGI_APPLICATION = 'vl.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-# DEVELOPMENT_MODE = True
-# DEBUG = True
+DEVELOPMENT_MODE = True
+DEBUG = True
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {

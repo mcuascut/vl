@@ -46,9 +46,9 @@ Home
 <div class="container requirements">
     <h1>Requirements</h1>
     <div class="reqs">
-        <p>Must be 18+ or older to apply</p>
-        <p>Must have noise cancellation headset</p>
-        <p>Must have your own desktop or laptop</p>
+        <p class="req-p">Must be 18+ or older to apply</p>
+        <p class="req-p">Must have noise cancellation headset</p>
+        <p class="req-p">Must have your own desktop or laptop</p>
     </div>
 </div>
 
@@ -81,12 +81,12 @@ Home
 <div class="container expectations">
     <h1>What you can Expect</h1>
     <div class="container expecs">
-        <p>Create your own schedule and set your own hours!</p>
-        <p>Work from the comfort of your home with no distractions!</p>
-        <p>Work for Top Fortune 500 companies and become your own Boss!</p>
+        <p class="ex-p">Create your own schedule and set your own hours!</p>
+        <p class="ex-p">Work from the comfort of your home with no distractions!</p>
+        <p class="ex-p">Work for Top Fortune 500 companies and become your own Boss!</p>
     </div>
     <ul class="list" style="display: flex; justify-content: center;">
-        <li id="become-button" style="border:2px solid white;"><a href="/become-an-agent/">Become an Agent</a></li>
+        <li class="bec" style="border:2px solid white;"><a href="/become-an-agent/" class="bec">Become an Agent</a></li>
     </ul>
 </div>
 
@@ -108,7 +108,7 @@ Home
     </div>
     <div class="second">
         <div class="form">
-            <form action="/contact/" method="post">
+            <form action="/contact/" method="post" id="form">
                 <h2>If You Would Like to Work From Home,<br>Leave Us a Message
                     and We’ll Get Back to You:</h2>
                 {% csrf_token %}
