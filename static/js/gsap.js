@@ -1,24 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".steps", {duration: .5, scrollTrigger: {
+gsap.to(".steps", {duration: 1, scrollTrigger: {
     trigger: ".steps",
     start: "70% bottom",
     markers: false,
 }, x: 0, stagger: 0.3});
 
-gsap.to(".req-p", {duration: .5, scrollTrigger: {
+gsap.to(".req-p", {duration: 1, scrollTrigger: {
     trigger: ".requirements",
     start: "70% bottom",
     markers: false,
 }, x: 0, stagger: 0.3});
 
-gsap.to(".ben", {duration: .5, scrollTrigger: {
+gsap.to(".ben", {duration: 1, scrollTrigger: {
     trigger: ".benefits",
     start: "50% bottom",
     markers: false,
 }, x: 0, stagger: 0.3});
 
-gsap.to(".ex-p", {duration: .5, scrollTrigger: {
+gsap.to(".ex-p", {duration: 1, scrollTrigger: {
     trigger: ".expectations",
     start: "70% bottom",
     markers: false,
@@ -51,5 +51,5 @@ gsap.to(".CEO-img", {duration: 1, delay: 1, transform: "translateY(0)", opacity:
 gsap.to(".who-we-are", {duration: 1, scrollTrigger: {
     trigger: ".who-we-are",
     start: "50% bottom",
-    markers: true,
+    markers: false,
 }, opacity: 1});

@@ -48,7 +48,6 @@ button:active, li:active {
     display: flex;
     justify-content: center;
     gap: 300px;
-    background-color: rgb(98, 183, 211)!important;
 }
 
 .brand {
@@ -72,6 +71,11 @@ button:active, li:active {
     position: relative;
     top: 20px;
     font-size: 25px;
+}
+
+.brand-text {
+    position: relative;
+    bottom: 20px;
 }
 
 .brand-text, .brand-text h1 a {
@@ -127,6 +131,7 @@ nav {
     height: 80vh;
     background-image: url('/static/images/bgbg.png');
     background-size: cover;
+    background-position-y: -200px;
     max-width: 100vw;
     background-attachment: fixed;
 }
@@ -234,6 +239,10 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: rgb(98, 183, 211);
+    background-image: url("/static/images/backg.png");
+    background-size: cover;
+    background-position-x: -100px;
+    background-attachment: fixed;
 }
 
 .processes {
@@ -252,17 +261,27 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    border: 2px solid rgb(98, 183, 211);
-    background-color: rgb(255, 255, 255);
+}
+
+.steps img {
+    padding-bottom: 20px;
+}
+
+.steps .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .steps h2 {
-    color: rgb(0, 125, 170);
+    color: rgb(11, 26, 49);
 }
 
 .steps p {
     width: 70%;
     color: rgb(11, 26, 49);
+    color: white;
 }
 
 /* ---------------------- */
@@ -343,8 +362,6 @@ nav {
 .reqs p {
     transform: translateX(-2000px);
     padding: 0 20px 20px 0;
-    border-right: 2px solid white;
-    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .req-p:nth-child(odd) {
@@ -361,12 +378,14 @@ nav {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    background-color: rgb(98, 183, 211);
+    background-image: url("/static/images/backg.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .bens {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
 }
 
@@ -378,17 +397,15 @@ nav {
     flex-direction: column;
     width: 500px;
     padding: 20px 0;
-    border: 2px solid rgb(98, 183, 211);
-    background-color: rgb(255, 255, 255);
 }
 
 .ben h2 {
-    color: rgb(0, 125, 170);
+    color: rgb(11, 26, 49);
 }
 
 .ben p {
     width: 70%;
-    color: rgb(11, 26, 49);
+    color: white;
 }
 
 /* Expectations Section */
@@ -411,8 +428,6 @@ nav {
 
 .expecs p {
     padding: 0 20px 20px 0;
-    border-right: 2px solid white;
-    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .ex-p {
@@ -427,6 +442,12 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(11, 26, 49);
+}
+
+.partners h1 {
+    border-bottom: 15px solid rgb(255, 255, 255);
+    padding: 50px 0;
 }
 
 .parts {
@@ -434,14 +455,13 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border-bottom: 25px solid goldenrod;
 }
 
 /* ------------ */
 /* Contact Form */
 
 .contact {
-    border-top: 2px solid goldenrod;
-    border-bottom: 2px solid goldenrod;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -461,7 +481,6 @@ form input, form textarea {
     background: none;
     border: none;
     border-bottom: 2px solid rgb(98, 183, 211);
-    border-right: 2px solid white;
     color: white;
     width: 80%;
 }
@@ -622,7 +641,56 @@ form button {
     }
 
     .hero {
-        background-position-y: -30px;
+        background-position-x: -1200px;
+        background-position-y: 50px;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        20% {
+            opacity: .5;
+        }
+        40% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 1;
+        }
+    
+        80%{
+            opacity: .5;
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    }
+    @keyframes fade-in-2 {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        20% {
+            opacity: .25;
+        }
+        50% {
+            opacity: .5;
+        }
+        75% {
+            opacity: .75;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-290px);
+        }
+    }
+
+    #p2 {
+        margin: 0;
+        padding: 0;
     }
 
     .transform {
@@ -639,9 +707,11 @@ form button {
         padding: 20px 0;
     }
 
-    #p3 {
-        display: none;
+    .ex-p {
+        width: 90%;
     }
+
+
 
     /* become an agent page */
 
